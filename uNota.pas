@@ -6,13 +6,13 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo, System.Actions,
-  FMX.ActnList, FMX.StdActns, FMX.MediaLibrary.Actions, FMX.TabControl;
+  FMX.ActnList, FMX.StdActns, FMX.MediaLibrary.Actions, FMX.TabControl,
+  uDataModule;
 
 type
   Tfrmnota = class(TForm)
     tlb1: TToolBar;
     lbltitle: TLabel;
-    stylbk1: TStyleBook;
     btn1: TSpeedButton;
     btn2: TSpeedButton;
     actlst1: TActionList;
@@ -98,7 +98,7 @@ end;
 procedure Tfrmnota.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   mmonota.Lines.SaveToFile(filepath);
-  ShowMessage('Jou Notas is gestoor!');
+  ShowMessage('Jou notas is gestoor!');
 end;
 
 procedure Tfrmnota.FormShow(Sender: TObject);
@@ -107,6 +107,7 @@ begin
 
   mmonota.Lines.Clear;
   filepath := GetHomePath + dag + '-' + vak + '.dat';
+
   if FileExists(filepath) then
     begin
       mmonota.Lines.LoadFromFile(filepath);

@@ -3,12 +3,17 @@
 	<Transactions>
     <Transaction>2017/09/03 15:01:09.000.172,=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2017/09/04 16:52:15.000.944,=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2017/09/06 15:21:25.096,=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2017/09/06 15:21:37.847,C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\uPNHSR.pas=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2017/09/06 15:21:37.847,C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\uPNHSR.fmx=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2017/09/06 15:21:42.754,C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\pPNHSR.dproj=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2017/09/06 19:17:53.250,C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\PNHSrooster.dproj=C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\pPNHSR.dproj</Transaction>
-    <Transaction>2017/09/06 19:50:11.458,=C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\uNota.pas</Transaction>
-  </Transactions>  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5" Android="AVD_for_Nexus_5_by_Google"/>
-  </ActiveMobileDevice>
+    <Transaction>2017/09/06 15:21:25.000.096,=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/09/06 15:21:37.000.847,C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\uPNHSR.pas=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/09/06 15:21:37.000.847,C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\uPNHSR.fmx=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2017/09/06 15:21:42.000.754,C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\pPNHSR.dproj=C:\Users\adria\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2017/09/06 19:17:53.000.250,C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\PNHSrooster.dproj=C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\pPNHSR.dproj</Transaction>
+    <Transaction>2017/09/06 19:50:11.000.458,=C:\Users\adria\Documents\Embarcadero\Studio\Projects\PNHS Rooster\uNota.pas</Transaction>
+    <Transaction>2017/09/07 15:15:06.637,=C:\Users\adria\OneDrive\Projects (Delphi)\PNHS Rooster (Android)\Unit1.pas</Transaction>
+    <Transaction>2017/09/07 15:15:25.468,C:\Users\adria\OneDrive\Projects (Delphi)\PNHS Rooster (Android)\uDataModule.pas=C:\Users\adria\OneDrive\Projects (Delphi)\PNHS Rooster (Android)\Unit1.pas</Transaction>
+    <Transaction>2017/09/07 15:15:25.468,C:\Users\adria\OneDrive\Projects (Delphi)\PNHS Rooster (Android)\uDataModule.dfm=C:\Users\adria\OneDrive\Projects (Delphi)\PNHS Rooster (Android)\Unit1.dfm</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="4d00223657609015"/>
+	</ActiveMobileDevice>
 </BorlandProject>

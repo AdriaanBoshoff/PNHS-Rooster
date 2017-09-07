@@ -8,7 +8,7 @@ uses
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListBox, FMX.TabControl,
   FMX.Objects, FMX.Effects, FMX.Edit, FMX.VirtualKeyboard, FMX.Platform,
   FMX.Colors, FMX.Layouts, FMX.Ani, IniFiles, System.UIConsts, FMX.Gestures,
-  uNota;
+  uNota, uDataModule;
 
 type
   Tfrmmain = class(TForm)
@@ -85,12 +85,10 @@ type
     btn52: TSpeedButton;
     btn53: TSpeedButton;
     cbbstyles: TComboBox;
-    stylbkdarkblue: TStyleBook;
-    stylbkcopperdark: TStyleBook;
     lbl5: TLabel;
-    stylbkjet: TStyleBook;
     gstrmngr1: TGestureManager;
     btn54: TSpeedButton;
+    btnclear: TEditButton;
     procedure edtnaamKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
     procedure edtnaamTap(Sender: TObject; const Point: TPointF);
@@ -253,6 +251,8 @@ type
     procedure btn49Gesture(Sender: TObject; const EventInfo: TGestureEventInfo;
       var Handled: Boolean);
     procedure btn54Click(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure btnclearClick(Sender: TObject);
   private
     { Private declarations }
     editbutton: TButton;
@@ -1149,6 +1149,11 @@ begin
     end;
 end;
 
+procedure Tfrmmain.btnclearClick(Sender: TObject);
+begin
+  edtnaam.Text := '';
+end;
+
 procedure Tfrmmain.cbbstylesChange(Sender: TObject);
 var
   ini: TIniFile;
@@ -1157,9 +1162,12 @@ begin
       StyleBook := TStyleBook(cbbstyles.ListItems[cbbstyles.ItemIndex].Data); }
 
   case cbbstyles.ItemIndex of
-    0 : StyleBook := stylbkdarkblue;
-    1 : StyleBook := stylbkcopperdark;
-    2 : StyleBook := stylbkjet;
+    0 : StyleBook := dmData.stylbkdarkblue;
+    1 : StyleBook := dmData.stylbkcopperdark;
+    2 : StyleBook := dmData.stylbkjet;
+    3 : StyleBook := dmData.stylbklight;
+    4 : StyleBook := dmData.stylbkvapor;
+    5 : StyleBook := dmData.stylbkcoraldark;
   end;
 
   ini := TIniFile.Create(ini_settings);
@@ -1217,8 +1225,6 @@ begin
     begin
       if TPlatformServices.Current.SupportsPlatformService(IFMXVirtualKeyboardService, IInterface(KeyboardService)) then
         KeyboardService.HideVirtualKeyboard;
-
-      pnleditbox.SetFocus;
     end;
 end;
 
@@ -1239,20 +1245,26 @@ begin
     end;
 end;
 
+procedure Tfrmmain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+  if rctnglopacity.visible = True then
+    begin
+      if pnleditbox.Visible = True then
+        begin
+          CanClose := False;
+          fltnmtn1.StartValue := (Self.Height / 2) - (pnleditbox.Height / 2);
+          fltnmtn1.StopValue := - pnleditbox.Height;
+          fltnmtn1.Start;
+        end;
+    end
+  else
+    CanClose := True;
+end;
+
 procedure Tfrmmain.FormCreate(Sender: TObject);
 var
   Index: Integer;
 begin
- { EnumObjects(function (AObject: TFmxObject): TEnumProcResult
-  begin
-      if AObject is TStyleBook then
-      begin
-        Index := cbbstyles.Items.Add(TStyleBook(AObject).StyleName);
-        cbbstyles.ListItems[Index].Data := AObject;
-      end;
-      Result := TEnumProcResult.Continue;
-    end);   }
-
   Application.Title := 'PNHS Rooster';
   ini_settings := GetHomePath + '\vakke_settings.ini';
   LoadSettings;
@@ -1271,18 +1283,33 @@ begin
     theme := ini.ReadString('App Settings', 'Theme', 'Dark Blue');
     if theme = 'Dark Blue' then
       begin
-        StyleBook := stylbkdarkblue;
+        StyleBook := dmData.stylbkdarkblue;
         cbbstyles.ItemIndex := 0;
       end
     else if theme = 'Copper Dark' then
       begin
-        StyleBook := stylbkcopperdark;
+        StyleBook := dmData.stylbkcopperdark;
         cbbstyles.ItemIndex := 1;
       end
     else if theme = 'Jet' then
       begin
-        StyleBook := stylbkjet;
+        StyleBook := dmData.stylbkjet;
         cbbstyles.ItemIndex := 2;
+      end
+    else if theme = 'Light' then
+      begin
+        StyleBook := dmData.stylbklight;
+        cbbstyles.ItemIndex := 3;
+      end
+    else if theme = 'Vapor' then
+      begin
+        StyleBook := dmData.stylbkvapor;
+        cbbstyles.ItemIndex := 4;
+      end
+    else if theme = 'Coral Dark' then
+      begin
+        StyleBook := dmData.stylbkvapor;
+        cbbstyles.ItemIndex := 5;
       end;
 
     //Buttons
@@ -1393,6 +1420,7 @@ procedure Tfrmmain.MaakNota(vak: TButton);
 begin
   frmnota.dag := tbc1.ActiveTab.Text;
   frmnota.vak := vak.Text;
+  frmnota.StyleBook := StyleBook;
   frmnota.Show;
 end;
 
