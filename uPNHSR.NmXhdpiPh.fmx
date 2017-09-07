@@ -1,0 +1,221 @@
+inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited tbc1: TTabControl
+    Size.Width = 400.000000000000000000
+    Size.Height = 519.000000000000000000
+    TabIndex = 5
+    Sizes = (
+      400s
+      470s
+      400s
+      470s
+      400s
+      470s
+      400s
+      470s
+      400s
+      470s
+      400s
+      470s)
+    inherited tbtmdag1: TTabItem
+      IsSelected = False
+      Size.Width = 66.000000000000000000
+      ExplicitSize.cx = 68.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited btn1: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn2: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn3: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn4: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn5: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn6: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn7: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn8: TButton
+        Size.Width = 400.000000000000000000
+      end
+    end
+    inherited tbtmdag2: TTabItem
+      Size.Width = 66.000000000000000000
+      ExplicitSize.cx = 68.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited btn9: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn10: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn11: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn12: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn13: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn14: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn15: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn16: TButton
+        Size.Width = 400.000000000000000000
+      end
+    end
+    inherited tbtmdag3: TTabItem
+      Size.Width = 66.000000000000000000
+      ExplicitSize.cx = 68.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited btn17: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn18: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn19: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn20: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn21: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn22: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn23: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn24: TButton
+        Size.Width = 400.000000000000000000
+      end
+    end
+    inherited tbtmdag4: TTabItem
+      Size.Width = 66.000000000000000000
+      ExplicitSize.cx = 68.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited btn25: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn26: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn27: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn28: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn29: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn30: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn31: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn32: TButton
+        Size.Width = 400.000000000000000000
+      end
+    end
+    inherited tbtmdag5: TTabItem
+      Size.Width = 66.000000000000000000
+      ExplicitSize.cx = 68.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited btn33: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn34: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn35: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn36: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn37: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn38: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn39: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn40: TButton
+        Size.Width = 400.000000000000000000
+      end
+    end
+    inherited tbtmdag6: TTabItem
+      IsSelected = True
+      Size.Width = 70.000000000000000000
+      ExplicitSize.cx = 68.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited btn41: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn42: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn43: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn44: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn45: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn46: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn47: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn48: TButton
+        Size.Width = 400.000000000000000000
+      end
+      inherited btn49: TButton
+        Size.Width = 400.000000000000000000
+      end
+    end
+  end
+  inherited tlb2: TToolBar
+    Position.Y = 567.000000000000000000
+    Size.Width = 400.000000000000000000
+    inherited btn53: TSpeedButton
+      Position.X = 352.000000000000000000
+    end
+    inherited cbbstyles: TComboBox
+      Size.Width = 240.000000000000000000
+    end
+  end
+  inherited tlb1: TToolBar
+    Size.Width = 400.000000000000000000
+    inherited lbl1: TLabel
+      Size.Width = 400.000000000000000000
+    end
+    inherited swtcheditmode: TSwitch
+      Size.PlatformDefault = False
+    end
+  end
+end
