@@ -5,7 +5,6 @@ inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
   inherited tbc1: TTabControl
     Size.Width = 400.000000000000000000
     Size.Height = 519.000000000000000000
-    TabIndex = 5
     Sizes = (
       400s
       470s
@@ -20,7 +19,6 @@ inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
       400s
       470s)
     inherited tbtmdag1: TTabItem
-      IsSelected = False
       Size.Width = 66.000000000000000000
       ExplicitSize.cx = 68.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -47,6 +45,12 @@ inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
       end
       inherited btn8: TButton
         Size.Width = 400.000000000000000000
+      end
+      inherited cltpnl2: TCalloutPanel
+        Size.Width = 209.000000000000000000
+        inherited lbl7: TLabel
+          Size.Width = 189.000000000000000000
+        end
       end
     end
     inherited tbtmdag2: TTabItem
@@ -166,7 +170,6 @@ inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
       end
     end
     inherited tbtmdag6: TTabItem
-      IsSelected = True
       Size.Width = 70.000000000000000000
       ExplicitSize.cx = 68.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -214,8 +217,18 @@ inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
     inherited lbl1: TLabel
       Size.Width = 400.000000000000000000
     end
-    inherited swtcheditmode: TSwitch
-      Size.PlatformDefault = False
+  end
+  inherited pnleditbox: TPanel
+    inherited edtnaam: TEdit
+      inherited btnclear: TEditButton
+        Position.Y = 10.000000000000000000
+      end
+    end
+  end
+  inherited cltpnl1: TCalloutPanel
+    Size.Width = 241.000000000000000000
+    inherited lbl6: TLabel
+      Size.Width = 241.000000000000000000
     end
   end
 end

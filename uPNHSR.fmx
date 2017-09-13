@@ -151,6 +151,51 @@ object frmmain: Tfrmmain
         Text = 'btn8'
         OnClick = btn8Click
       end
+      object cltpnl2: TCalloutPanel
+        Anchors = [akLeft, akTop, akRight]
+        Padding.Top = 20.000000000000000000
+        Position.X = 96.000000000000000000
+        Position.Y = 31.000000000000000000
+        Size.Width = 217.000000000000000000
+        Size.Height = 98.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+        TabOrder = 8
+        CalloutWidth = 23.000000000000000000
+        CalloutLength = 20.000000000000000000
+        object lbl7: TLabel
+          Align = Client
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 197.000000000000000000
+          Size.Height = 78.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Tap op die panel en edit dit soos wat jy wil.'
+        end
+      end
+      object cltpnl4: TCalloutPanel
+        Padding.Top = 20.000000000000000000
+        Position.X = 120.000000000000000000
+        Position.Y = 31.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 120.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+        TabOrder = 9
+        CalloutWidth = 23.000000000000000000
+        CalloutLength = 20.000000000000000000
+        object lbl9: TLabel
+          Align = Client
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 157.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = 'Tap en hold om notas te maak'
+        end
+      end
     end
     object tbtmdag2: TTabItem
       CustomIcon = <
@@ -833,6 +878,7 @@ object frmmain: Tfrmmain
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
+      OnSwitch = swtcheditmodeSwitch
     end
   end
   object rctnglopacity: TRectangle
@@ -918,16 +964,6 @@ object frmmain: Tfrmmain
       Size.PlatformDefault = False
       Text = 'Kleur:'
     end
-    object cmbclrbxcolor: TComboColorBox
-      Anchors = [akLeft, akTop, akRight]
-      Color = claWhite
-      Position.X = 88.000000000000000000
-      Position.Y = 72.000000000000000000
-      Size.Width = 233.000000000000000000
-      Size.Height = 32.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 5
-    end
     object fltnmtn1: TFloatAnimation
       Duration = 0.300000011920929000
       OnFinish = fltnmtn1Finish
@@ -944,6 +980,216 @@ object frmmain: Tfrmmain
       Size.PlatformDefault = False
       StyleLookup = 'refreshtoolbutton'
       OnClick = btn54Click
+    end
+    object tmsfmxclrpckrcolor: TTMSFMXColorPicker
+      Anchors = [akLeft, akTop, akRight]
+      DisableFocusEffect = False
+      Position.X = 88.000000000000000000
+      Position.Y = 72.000000000000000000
+      TabOrder = 5
+      Size.Width = 233.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      AdaptToStyle = True
+      Version = '1.0.0.0'
+      DropDownWidth = 200.000000000000000000
+      DropDownHeight = 175.000000000000000000
+      Appearance.Fill.Color = x19FFFFFF
+      Appearance.FillHover.Color = x7FFFFFFF
+      Rows = 7
+      Columns = 8
+      Items = <
+        item
+          ColumnSpan = 8
+          Text = 'Automatic'
+          Color = claBlack
+        end
+        item
+          Color = claBlack
+        end
+        item
+          Color = xFF003399
+        end
+        item
+          Color = xFF003333
+        end
+        item
+          Color = xFF003300
+        end
+        item
+          Color = xFF663300
+        end
+        item
+          Color = claNavy
+        end
+        item
+          Color = xFF353333
+        end
+        item
+          Color = xFF333333
+        end
+        item
+          Color = claMaroon
+        end
+        item
+          Color = xFFFF6600
+        end
+        item
+          Color = claOlive
+        end
+        item
+          Color = claGreen
+        end
+        item
+          Color = claTeal
+        end
+        item
+          Color = claBlue
+        end
+        item
+          Color = xFF666699
+        end
+        item
+          Color = claGray
+        end
+        item
+          Color = claRed
+        end
+        item
+          Color = xFFFF9900
+        end
+        item
+          Color = xFF99CC00
+        end
+        item
+          Color = xFF339966
+        end
+        item
+          Color = xFF33CCCC
+        end
+        item
+          Color = xFF3366FF
+        end
+        item
+          Color = claPurple
+        end
+        item
+          Color = xFF999999
+        end
+        item
+          Color = claFuchsia
+        end
+        item
+          Color = xFFFFCC00
+        end
+        item
+          Color = claYellow
+        end
+        item
+          Color = claLime
+        end
+        item
+          Color = claAqua
+        end
+        item
+          Color = xFF00CCFF
+        end
+        item
+          Color = xFF993366
+        end
+        item
+          Color = claSilver
+        end
+        item
+          Color = xFFFF99CC
+        end
+        item
+          Color = xFFFFCC99
+        end
+        item
+          Color = xFFFFFF99
+        end
+        item
+          Color = xFFCCFFCC
+        end
+        item
+          Color = xFFCCFFFF
+        end
+        item
+          Color = xFF99CCFF
+        end
+        item
+          Color = xFFCC99FF
+        end
+        item
+          Color = claWhite
+        end
+        item
+          CanSelect = False
+          ColumnSpan = 8
+          Text = 'More Colors...'
+        end
+        item
+          Visible = False
+        end>
+      Mode = csmExtendedMore
+      SelectedColor = claNull
+    end
+    object chkkleur: TCheckBox
+      Anchors = [akLeft, akTop, akRight]
+      Position.X = 24.000000000000000000
+      Position.Y = 120.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Stel vak se kleur vir elke dag.'
+    end
+  end
+  object cltpnl1: TCalloutPanel
+    Anchors = [akLeft, akTop, akRight]
+    Padding.Top = 20.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 39.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 98.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'calloutpanelstyle'
+    Visible = False
+    TabOrder = 6
+    CalloutWidth = 23.000000000000000000
+    CalloutLength = 20.000000000000000000
+    CalloutOffset = 30.000000000000000000
+    object lbl6: TLabel
+      Align = Client
+      Size.Width = 249.000000000000000000
+      Size.Height = 78.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Sit edit mode aan'
+    end
+  end
+  object cltpnl3: TCalloutPanel
+    Padding.Top = 20.000000000000000000
+    Position.X = 48.000000000000000000
+    Position.Y = 39.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 82.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 7
+    CalloutWidth = 23.000000000000000000
+    CalloutLength = 20.000000000000000000
+    CalloutOffset = 10.000000000000000000
+    object lbl8: TLabel
+      Align = Client
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Size.Width = 157.000000000000000000
+      Size.Height = 62.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Sit edit mode af.'
     end
   end
   object gstrmngr1: TGestureManager

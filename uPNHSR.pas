@@ -8,7 +8,8 @@ uses
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListBox, FMX.TabControl,
   FMX.Objects, FMX.Effects, FMX.Edit, FMX.VirtualKeyboard, FMX.Platform,
   FMX.Colors, FMX.Layouts, FMX.Ani, IniFiles, System.UIConsts, FMX.Gestures,
-  uNota, uDataModule;
+  uNota, uDataModule, FMX.Advertising, FMX.TMSBaseControl, FMX.TMSCustomPicker,
+  FMX.TMSColorPicker;
 
 type
   Tfrmmain = class(TForm)
@@ -80,7 +81,6 @@ type
     btn50: TSpeedButton;
     btn51: TSpeedButton;
     lbl4: TLabel;
-    cmbclrbxcolor: TComboColorBox;
     fltnmtn1: TFloatAnimation;
     btn52: TSpeedButton;
     btn53: TSpeedButton;
@@ -89,6 +89,16 @@ type
     gstrmngr1: TGestureManager;
     btn54: TSpeedButton;
     btnclear: TEditButton;
+    cltpnl1: TCalloutPanel;
+    lbl6: TLabel;
+    cltpnl2: TCalloutPanel;
+    lbl7: TLabel;
+    cltpnl3: TCalloutPanel;
+    lbl8: TLabel;
+    cltpnl4: TCalloutPanel;
+    lbl9: TLabel;
+    tmsfmxclrpckrcolor: TTMSFMXColorPicker;
+    chkkleur: TCheckBox;
     procedure edtnaamKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
     procedure edtnaamTap(Sender: TObject; const Point: TPointF);
@@ -253,10 +263,12 @@ type
     procedure btn54Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure btnclearClick(Sender: TObject);
+    procedure swtcheditmodeSwitch(Sender: TObject);
   private
     { Private declarations }
     editbutton: TButton;
     ini_settings: string;
+    firststart: Boolean;
   public
     { Public declarations }
   end;
@@ -267,6 +279,8 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.SmXhdpiPh.fmx ANDROID}
+{$R *.NmXhdpiPh.fmx ANDROID}
 
 procedure Tfrmmain.btn10Click(Sender: TObject);
 begin
@@ -440,16 +454,32 @@ end;
 
 procedure Tfrmmain.btn1Click(Sender: TObject);
 begin
+  cltpnl2.Visible := False;
   SetText((sender as tbutton));
 end;
 
 procedure Tfrmmain.btn1Gesture(Sender: TObject;
   const EventInfo: TGestureEventInfo; var Handled: Boolean);
+var
+  ini: TIniFile;
 begin
   if swtcheditmode.IsChecked = False then
     begin
       if EventInfo.GestureID = igiLongTap then
         begin
+          if cltpnl4.Visible = True then
+            begin
+              cltpnl4.Visible := False;
+
+              firststart := False;
+              ini := TIniFile.Create(ini_settings);
+              try
+                ini.WriteBool('App Settings', 'First_Start', False);
+              finally
+                ini.Free;
+              end;
+            end;
+
           MaakNota((Sender as TButton));
         end;
     end;
@@ -1026,21 +1056,63 @@ end;
 procedure Tfrmmain.btn51Click(Sender: TObject);
 var
   ini: TIniFile;
+  i: Integer;
 begin
-  fltnmtn1.StartValue := (Self.Height / 2) - (pnleditbox.Height / 2);
-  fltnmtn1.StopValue := - pnleditbox.Height;
-  fltnmtn1.Start;
+  if chkkleur.IsChecked then
+    begin
+      fltnmtn1.StartValue := (Self.Height / 2) - (pnleditbox.Height / 2);
+      fltnmtn1.StopValue := - pnleditbox.Height;
+      fltnmtn1.Start;
 
-  editbutton.Text := edtnaam.Text;
-  editbutton.TintColor := cmbclrbxcolor.Color;
+      editbutton.Text := edtnaam.Text;
+      editbutton.TintColor := tmsfmxclrpckrcolor.SelectedColor;
 
-  ini := TIniFile.Create(ini_settings);
-  try
-    ini.WriteString('Vakke', editbutton.Name, edtnaam.Text);
-    ini.WriteString('Vakke', editbutton.Name + '_color', AlphaColorToString(cmbclrbxcolor.Color))
-  finally
-    ini.Free;
-  end;
+      for i := 0 to ComponentCount - 1 do
+        begin
+          if Components[i] is TButton then
+            begin
+              if TButton(Components[i]).Text = edtnaam.Text then
+                begin
+                  TButton(Components[i]).TintColor := tmsfmxclrpckrcolor.SelectedColor;
+
+                  ini := TIniFile.Create(ini_settings);
+                  try
+                    ini.WriteString('Vakke', TButton(Components[i]).Name + '_color',
+                      AlphaColorToString(tmsfmxclrpckrcolor.SelectedColor))
+                  finally
+                    ini.Free;
+                  end;
+                end;
+            end;
+        end;
+
+      if firststart = True then
+        begin
+          cltpnl3.Visible := True;
+        end;
+    end
+  else
+    begin
+      fltnmtn1.StartValue := (Self.Height / 2) - (pnleditbox.Height / 2);
+      fltnmtn1.StopValue := - pnleditbox.Height;
+      fltnmtn1.Start;
+
+      editbutton.Text := edtnaam.Text;
+      editbutton.TintColor := tmsfmxclrpckrcolor.SelectedColor;
+
+      ini := TIniFile.Create(ini_settings);
+      try
+        ini.WriteString('Vakke', editbutton.Name, edtnaam.Text);
+        ini.WriteString('Vakke', editbutton.Name + '_color', AlphaColorToString(tmsfmxclrpckrcolor.SelectedColor))
+      finally
+        ini.Free;
+      end;
+
+      if firststart = True then
+        begin
+          cltpnl3.Visible := True;
+        end;
+    end;
 end;
 
 procedure Tfrmmain.btn52Click(Sender: TObject);
@@ -1061,7 +1133,7 @@ end;
 
 procedure Tfrmmain.btn54Click(Sender: TObject);
 begin
-  cmbclrbxcolor.Color := StringToAlphaColor('Null');
+  tmsfmxclrpckrcolor.SelectedColor := StringToAlphaColor('Null');
 end;
 
 procedure Tfrmmain.btn5Click(Sender: TObject);
@@ -1185,8 +1257,9 @@ begin
   if swtcheditmode.IsChecked then
     Begin
       edtnaam.Text := button.Text;
-      cmbclrbxcolor.Color := button.TintColor;
+      tmsfmxclrpckrcolor.SelectedColor := button.TintColor;
       editbutton := button;
+      chkkleur.IsChecked := False;
 
       fltnmtn1.StartValue := - pnleditbox .Height;
       fltnmtn1.StopValue := (Self.Height / 2) - (pnleditbox.Height / 2);
@@ -1214,6 +1287,20 @@ begin
     }
     End;
 
+end;
+
+procedure Tfrmmain.swtcheditmodeSwitch(Sender: TObject);
+begin
+  if cltpnl1.Visible = True then
+    begin
+      cltpnl1.Visible := False;
+      cltpnl2.Visible := True;
+    end
+  else if cltpnl3.Visible = True then
+    begin
+      cltpnl3.Visible := False;
+      cltpnl4.Visible := True;
+    end;
 end;
 
 procedure Tfrmmain.edtnaamKeyDown(Sender: TObject; var Key: Word;
@@ -1279,6 +1366,12 @@ begin
   try
     //App Settings
     tbc1.TabIndex := ini.ReadInteger('App Settings', 'LastTab', 0);
+
+    firststart := ini.ReadBool('App Settings', 'First_Start', True);
+    if firststart = True then
+      begin
+        cltpnl1.Visible := True;
+      end;
 
     theme := ini.ReadString('App Settings', 'Theme', 'Dark Blue');
     if theme = 'Dark Blue' then

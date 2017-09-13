@@ -5,6 +5,7 @@ inherited frmmain_SmXhdpiPh: Tfrmmain_SmXhdpiPh
   inherited tbc1: TTabControl
     Size.Width = 250.000000000000000000
     Size.Height = 279.000000000000000000
+    TabIndex = 5
     Sizes = (
       250s
       230s
@@ -19,180 +20,389 @@ inherited frmmain_SmXhdpiPh: Tfrmmain_SmXhdpiPh
       250s
       230s)
     inherited tbtmdag1: TTabItem
+      TextSettings.Font.Size = 11.000000000000000000
+      StyledSettings = [Family, Style, FontColor]
+      IsSelected = False
       Size.Width = 41.000000000000000000
       ExplicitSize.cx = 68.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited btn1: TButton
+        StyledSettings = [Family, Style, FontColor]
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn2: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 29.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn3: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 58.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn4: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 87.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn5: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 116.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn6: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 145.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn7: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 174.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn8: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 203.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
+      end
+      inherited cltpnl2: TCalloutPanel
+        Size.Width = 59.000000000000000000
+        inherited lbl7: TLabel
+          Size.Width = 39.000000000000000000
+        end
       end
     end
     inherited tbtmdag2: TTabItem
+      StyledSettings = [Family, Style, FontColor]
       Size.Width = 41.000000000000000000
       ExplicitSize.cx = 68.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited btn9: TButton
+        StyledSettings = [Family, Style, FontColor]
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn10: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 29.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn11: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 58.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn12: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 87.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn13: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 116.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn14: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 145.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn15: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 174.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn16: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 203.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
     end
     inherited tbtmdag3: TTabItem
+      TextSettings.Font.Size = 11.000000000000000000
+      StyledSettings = [Family, Style, FontColor]
       Size.Width = 41.000000000000000000
       ExplicitSize.cx = 68.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited btn17: TButton
+        StyledSettings = [Family, Style, FontColor]
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn18: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 29.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn19: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 58.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn20: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 87.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn21: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 116.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn22: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 145.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn23: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 174.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn24: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 203.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
     end
     inherited tbtmdag4: TTabItem
+      TextSettings.Font.Size = 11.000000000000000000
+      StyledSettings = [Family, Style, FontColor]
       Size.Width = 41.000000000000000000
       ExplicitSize.cx = 68.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited btn25: TButton
+        StyledSettings = [Family, Style, FontColor]
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn26: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 29.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn27: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 58.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn28: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 87.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn29: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 116.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn30: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 145.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn31: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 174.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn32: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 203.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
     end
     inherited tbtmdag5: TTabItem
+      TextSettings.Font.Size = 11.000000000000000000
+      StyledSettings = [Family, Style, FontColor]
       Size.Width = 41.000000000000000000
       ExplicitSize.cx = 68.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited btn33: TButton
+        StyledSettings = [Family, Style, FontColor]
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn34: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 29.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn35: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 58.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn36: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 87.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn37: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 116.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn38: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 145.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn39: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 174.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn40: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 203.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 29.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
     end
     inherited tbtmdag6: TTabItem
+      TextSettings.Font.Size = 11.000000000000000000
+      StyledSettings = [Family, Style, FontColor]
+      IsSelected = True
       Size.Width = 45.000000000000000000
       ExplicitSize.cx = 68.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited btn41: TButton
+        StyledSettings = [Family, Style, FontColor]
         Size.Width = 250.000000000000000000
+        Size.Height = 25.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn42: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 25.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 25.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn43: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 50.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 25.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn44: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 75.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 25.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn45: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 100.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 25.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn46: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 125.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 25.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn47: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 150.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 25.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn48: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 175.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 25.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
       inherited btn49: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 200.000000000000000000
         Size.Width = 250.000000000000000000
+        Size.Height = 25.000000000000000000
+        TextSettings.Font.Size = 11.000000000000000000
       end
     end
   end
@@ -211,8 +421,18 @@ inherited frmmain_SmXhdpiPh: Tfrmmain_SmXhdpiPh
     inherited lbl1: TLabel
       Size.Width = 250.000000000000000000
     end
-    inherited swtcheditmode: TSwitch
-      Size.PlatformDefault = False
+  end
+  inherited pnleditbox: TPanel
+    inherited edtnaam: TEdit
+      inherited btnclear: TEditButton
+        Position.Y = 10.000000000000000000
+      end
+    end
+  end
+  inherited cltpnl1: TCalloutPanel
+    Size.Width = 91.000000000000000000
+    inherited lbl6: TLabel
+      Size.Width = 91.000000000000000000
     end
   end
 end

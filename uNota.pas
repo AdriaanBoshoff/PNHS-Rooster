@@ -7,7 +7,8 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo, System.Actions,
   FMX.ActnList, FMX.StdActns, FMX.MediaLibrary.Actions, FMX.TabControl,
-  uDataModule;
+  uDataModule, FMX.TMSBaseControl, FMX.TMSScrollControl, FMX.TMSRichEditorBase,
+  FMX.TMSRichEditor;
 
 type
   Tfrmnota = class(TForm)
