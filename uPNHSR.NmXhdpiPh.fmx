@@ -23,6 +23,7 @@ inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
       ExplicitSize.cx = 68.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
       inherited btn1: TButton
+        StyledSettings = [Family, Size, FontColor]
         Size.Width = 400.000000000000000000
       end
       inherited btn2: TButton
@@ -47,9 +48,9 @@ inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
         Size.Width = 400.000000000000000000
       end
       inherited cltpnl2: TCalloutPanel
-        Size.Width = 209.000000000000000000
+        Size.Width = 193.000000000000000000
         inherited lbl7: TLabel
-          Size.Width = 189.000000000000000000
+          Size.Width = 173.000000000000000000
         end
       end
     end

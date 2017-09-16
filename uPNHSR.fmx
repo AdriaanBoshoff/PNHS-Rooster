@@ -1134,6 +1134,7 @@ object frmmain: Tfrmmain
         end>
       Mode = csmExtendedMore
       SelectedColor = claNull
+      SelectedItemIndex = 42
     end
     object chkkleur: TCheckBox
       Anchors = [akLeft, akTop, akRight]

@@ -264,6 +264,7 @@ type
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure btnclearClick(Sender: TObject);
     procedure swtcheditmodeSwitch(Sender: TObject);
+    procedure SaveSettingString(Section, Name, Value: string);
   private
     { Private declarations }
     editbutton: TButton;
@@ -460,8 +461,6 @@ end;
 
 procedure Tfrmmain.btn1Gesture(Sender: TObject;
   const EventInfo: TGestureEventInfo; var Handled: Boolean);
-var
-  ini: TIniFile;
 begin
   if swtcheditmode.IsChecked = False then
     begin
@@ -472,12 +471,8 @@ begin
               cltpnl4.Visible := False;
 
               firststart := False;
-              ini := TIniFile.Create(ini_settings);
-              try
-                ini.WriteBool('App Settings', 'First_Start', False);
-              finally
-                ini.Free;
-              end;
+
+              SaveSettingString('App Settings', 'First_Start', BoolToStr(False));
             end;
 
           MaakNota((Sender as TButton));
@@ -1055,7 +1050,6 @@ end;
 
 procedure Tfrmmain.btn51Click(Sender: TObject);
 var
-  ini: TIniFile;
   i: Integer;
 begin
   if chkkleur.IsChecked then
@@ -1067,7 +1061,9 @@ begin
       editbutton.Text := edtnaam.Text;
       editbutton.TintColor := tmsfmxclrpckrcolor.SelectedColor;
 
-      for i := 0 to ComponentCount - 1 do
+      SaveSettingString('Vakke', editbutton.Name, edtnaam.Text);
+
+      for i := 0 to ComponentCount -1 do
         begin
           if Components[i] is TButton then
             begin
@@ -1075,20 +1071,10 @@ begin
                 begin
                   TButton(Components[i]).TintColor := tmsfmxclrpckrcolor.SelectedColor;
 
-                  ini := TIniFile.Create(ini_settings);
-                  try
-                    ini.WriteString('Vakke', TButton(Components[i]).Name + '_color',
-                      AlphaColorToString(tmsfmxclrpckrcolor.SelectedColor))
-                  finally
-                    ini.Free;
-                  end;
+                  SaveSettingString('Vakke', TButton(Components[i]).Name + '_color',
+                      AlphaColorToString(tmsfmxclrpckrcolor.SelectedColor));
                 end;
             end;
-        end;
-
-      if firststart = True then
-        begin
-          cltpnl3.Visible := True;
         end;
     end
   else
@@ -1100,18 +1086,13 @@ begin
       editbutton.Text := edtnaam.Text;
       editbutton.TintColor := tmsfmxclrpckrcolor.SelectedColor;
 
-      ini := TIniFile.Create(ini_settings);
-      try
-        ini.WriteString('Vakke', editbutton.Name, edtnaam.Text);
-        ini.WriteString('Vakke', editbutton.Name + '_color', AlphaColorToString(tmsfmxclrpckrcolor.SelectedColor))
-      finally
-        ini.Free;
-      end;
+      SaveSettingString('Vakke', editbutton.Name, edtnaam.Text);
+      SaveSettingString('Vakke', editbutton.Name + '_color', AlphaColorToString(tmsfmxclrpckrcolor.SelectedColor));
+    end;
 
-      if firststart = True then
-        begin
-          cltpnl3.Visible := True;
-        end;
+  if firststart = True then
+    begin
+      cltpnl3.Visible := True;
     end;
 end;
 
@@ -1227,12 +1208,7 @@ begin
 end;
 
 procedure Tfrmmain.cbbstylesChange(Sender: TObject);
-var
-  ini: TIniFile;
 begin
-  {if cbbstyles.ItemIndex >= 0 then
-      StyleBook := TStyleBook(cbbstyles.ListItems[cbbstyles.ItemIndex].Data); }
-
   case cbbstyles.ItemIndex of
     0 : StyleBook := dmData.stylbkdarkblue;
     1 : StyleBook := dmData.stylbkcopperdark;
@@ -1242,9 +1218,16 @@ begin
     5 : StyleBook := dmData.stylbkcoraldark;
   end;
 
+  SaveSettingString('App Settings', 'Theme', cbbstyles.Items[cbbstyles.ItemIndex]);
+end;
+
+procedure Tfrmmain.SaveSettingString(Section, Name, Value: string);
+var
+  ini: TIniFile;
+begin
   ini := TIniFile.Create(ini_settings);
   try
-    ini.WriteString('App Settings', 'Theme', cbbstyles.Items[cbbstyles.ItemIndex]);
+    ini.WriteString(Section, Name, Value);
   finally
     ini.Free;
   end;
@@ -1518,15 +1501,8 @@ begin
 end;
 
 procedure Tfrmmain.tbc1Change(Sender: TObject);
-var
-  ini: TIniFile;
 begin
-  ini := TIniFile.Create(ini_settings);
-  try
-    ini.WriteInteger('App Settings', 'LastTab', tbc1.TabIndex);
-  finally
-    ini.Free;
-  end;
+  SaveSettingString('App Settings', 'LastTab', IntToStr(tbc1.TabIndex));
 end;
 
 end.
