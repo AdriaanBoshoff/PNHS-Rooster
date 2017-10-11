@@ -1046,6 +1046,11 @@ begin
   fltnmtn1.StartValue := (Self.Height / 2) - (pnleditbox.Height / 2);
   fltnmtn1.StopValue := - pnleditbox.Height;
   fltnmtn1.Start;
+
+  if firststart = True then
+    begin
+      cltpnl3.Visible := True;
+    end;
 end;
 
 procedure Tfrmmain.btn51Click(Sender: TObject);

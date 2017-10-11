@@ -48,9 +48,9 @@ inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
         Size.Width = 400.000000000000000000
       end
       inherited cltpnl2: TCalloutPanel
-        Size.Width = 193.000000000000000000
+        Size.Width = 185.000000000000000000
         inherited lbl7: TLabel
-          Size.Width = 173.000000000000000000
+          Size.Width = 165.000000000000000000
         end
       end
     end
@@ -220,6 +220,7 @@ inherited frmmain_NmXhdpiPh: Tfrmmain_NmXhdpiPh
     end
   end
   inherited pnleditbox: TPanel
+    Visible = False
     inherited edtnaam: TEdit
       inherited btnclear: TEditButton
         Position.Y = 10.000000000000000000

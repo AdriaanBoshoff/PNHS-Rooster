@@ -423,6 +423,7 @@ inherited frmmain_SmXhdpiPh: Tfrmmain_SmXhdpiPh
     end
   end
   inherited pnleditbox: TPanel
+    Visible = False
     inherited edtnaam: TEdit
       inherited btnclear: TEditButton
         Position.Y = 10.000000000000000000

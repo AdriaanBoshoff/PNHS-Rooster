@@ -14,7 +14,7 @@
     <Transaction>2017/09/07 15:15:25.000.468,C:\Users\adria\OneDrive\Projects (Delphi)\PNHS Rooster (Android)\uDataModule.pas=C:\Users\adria\OneDrive\Projects (Delphi)\PNHS Rooster (Android)\Unit1.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile iOSSimulator="iPhone5" Android="AVD_for_Nexus_5_by_Google"/>
+		<NoProfile iOSSimulator="iPhone5" Android="4d00223657609015"/>
 		<POSXVM iOSSimulator="iPhone5"/>
 	</ActiveMobileDevice>
 	<BT_BuildType>AppStore</BT_BuildType>
